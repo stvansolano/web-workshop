@@ -8,7 +8,12 @@ function fetchData(){
   request.open('GET', URL, true);
 
   request.onload = function() {
+    const OK = 200;
     
+    if (request.status !== OK) {
+      document.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
+      return;
+    }
   };
   request.send();
 }

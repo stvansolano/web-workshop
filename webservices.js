@@ -14,6 +14,12 @@ function fetchData(){
       document.innerHTML = 'An error occurred during your request: ' +  request.status + ' ' + request.statusText;
       return;
     }
+    var remoteStudents = JSON.parse(request.responseText);
+
+    remoteStudents.forEach(element => {
+      students.push(element);
+    });
+    loadDataGrid();
   };
   request.send();
 }

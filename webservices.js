@@ -7,6 +7,9 @@ function fetchData(){
   var request = new XMLHttpRequest();
   request.open('GET', URL, true);
 
+  request.onload = function() {
+    
+  };
   request.send();
 }
 

@@ -1,9 +1,4 @@
-var students = [
-    {id: "1122222", name: "John", score: 90 }, // 0 {Object} => students[0] => students[0].score => total  
-    {id: "2223333", name: "Larry", score: 60 }, // 1
-    {id: "4455555", name: "Joseph", score: 50 }, // 2
-    {id: "5526666", name: "Karla", score: 80}
-];
+var students = [];
 
 document.write("<h3>JSON</h3>");
 document.write("<pre class='alert alert-secondary'>"); // 1) Bootstrap class
@@ -86,7 +81,7 @@ function displayAverage()
     paragraph.classList.add("badge-info");
 
     paragraph.innerText = "Average: " + calculateAverage();
-
+    
     resultSection.appendChild(paragraph);
 }
 

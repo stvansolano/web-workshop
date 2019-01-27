@@ -50,11 +50,18 @@ function loadDataGrid() {
         var name = document.createElement("div");
         name.classList.add("col-sm");
         name.innerText =  students[i].name;
+        
+        var currentScore = students[i].score;
 
         var score = document.createElement("div");
         score.classList.add("col-sm");
         score.innerText =  students[i].score;
 
+        var passingScore = document.getElementById("passingScoreInput").value;
+        if (currentScore <= passingScore)
+        {
+            score.classList.add("lowScore");
+        }
         console.log(students[i]);
 
         dataList.appendChild(listItem);
@@ -81,6 +88,30 @@ function displayAverage()
     paragraph.innerText = "Average: " + calculateAverage();
 
     resultSection.appendChild(paragraph);
+}
+
+function refreshScores(){
+    let dataList = document.getElementById("dataList");
+
+    while (dataList.childElementCount > 1){
+        dataList.removeChild(dataList.lastChild);
+    }
+    loadDataGrid();
+}
+
+function addNewStudent()
+{
+    var scoreInput = document.getElementById("scoreInput").value;    
+    var nameInput = document.getElementById("nameInput").value;
+    var idInput = document.getElementById("idInput").value;
+
+    students.push({
+        id: idInput,
+        name: nameInput,
+        score: scoreInput
+    });
+
+    refreshScores();
 }
 
 function myReplacer(name, val) {

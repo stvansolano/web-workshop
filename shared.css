@@ -5,3 +5,7 @@ body {
 .highlight {
     background-color: yellow;
 }
+
+.lowScore {
+    color: red;
+}

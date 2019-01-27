@@ -13,11 +13,29 @@
     <header class="jumbotron">
         <h1>List of students</h1>
     </header>
-    
+    <section class="row-fluid">
+        <div class="form-group">
+            <label for="idInput">Id</label>
+            <input type="text" class="form-control" id="idInput" placeholder="Enter Id">
+        </div>
+        <div class="form-group">
+            <label for="scoreInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="scoreInput">Score</label>
+            <input id="scoreInput" class="form-control" type="number" onchange="refreshScores()" placeholder="Enter score" />
+        </div>
+        <button class="btn btn-primary" onclick="addNewStudent()">Add</button>
+    </section>
     <section class="row-fluid">
         <section class="btn-group">
             <button class="btn btn-primary" onclick="loadDataGrid()">Load</button>
             <button class="btn btn-secondary" onclick="displayAverage()">Average</button>
+        </section>
+        <section class="row-fluid">
+                <label for="passingScoreInput">Passing score</label>
+                <input id="passingScoreInput" type="number" value="60" onchange="refreshScores()" />
         </section>
     </section>
     <section class="row-fluid">

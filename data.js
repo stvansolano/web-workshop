@@ -1,21 +1,6 @@
-var students = [];
-
-document.write("<h3>JSON</h3>");
-document.write("<pre class='alert alert-secondary'>"); // 1) Bootstrap class
-document.write(JSON.stringify(students, undefined, 2));
-document.write("</pre>");
-document.write("<br/>");
-var names = [];
-
-students.forEach(student => {
-    names.push(student.name);
-});
-
-document.writeln("Students are:" + names);
-
-document.write("<pre>");
-document.writeln(`Average: ${calculateAverage()}`);
-document.write("</pre>");
+var students = [
+    
+];
 
 function calculateAverage(){
 
@@ -29,6 +14,9 @@ function calculateAverage(){
 }
 
 function loadDataGrid() {
+
+    var jsonData = document.getElementById("jsonData");
+    jsonData.innerText = JSON.stringify(students, undefined, 2);
 
     var i = 0;
     let dataList = document.getElementById("dataList");

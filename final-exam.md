@@ -26,8 +26,7 @@ Please follow the following indications carefully:
 5) Create separate sections by using the HTML tags as needed for:
 
     a) Displaying a product catalog
-    b) Shopping cart
-    c) "Confirm" purchase section
+    b) Shopping cart with "Continue" purchase section
 
 `Screenshot #1`
 ![Screenshot-01](/final-exam/screenshot-01.png)
@@ -43,7 +42,7 @@ Please follow the following indications carefully:
 2) Use HTML/CSS/JavaScript to display the data from the array to be the list of products available so new products can be added easily (either changing the array in the code or grabbing the data across the network)
 3) When the "Continue" button is clicked, it allows the user to navigate the checkout (shopping-cart) section.
 4) A "Buy" button is provided so it confirms the purchase and clears the shopping cart.
-5) Further purchases can be done (1 at the)
+5) Further purchases can be done (1 at the time)
 
 ### Part 3 - Provide a tailored shopping experience (HTML, CSS + JavaScript)
 Go beyond the mockup provided and make a HTML/CSS/JS proposal for making a better UI for the "Shopping cart" experience. Consider things like:
